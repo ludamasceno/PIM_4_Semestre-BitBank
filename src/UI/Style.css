@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 9, 2020, 3:09:50 AM
+    Author     : Luciano
+*/
+
+#pane{
+    -fx-background-color: linear-gradient(to right top, #0800c2, #0043d5, #006adf, #428be1, #7cabde);
+}
+
+TextField{
+    -fx-font-size: 14 pt;
+    -fx-background-radius: 15; 
+    -fx-border-radius: 15;
+    -fx-border-width: 2;
+    -fx-border-color: #2196f3;
+    -fx-text-fill: black;
+}
+
+#btnAcessar{
+    -fx-background-radius: 30;
+    -fx-background-color: #0043d5;
+    -fx-border-color: white;
+    -fx-border-radius: 30;
+    -fx-border-width: 2;
+}
+#btnAcessar:hover{
+    -fx-border-color: green;
+}
+.tab{
+    -fx-background-color: -fx-primary;
+}
+.tab-header-backgronud{
+    -fx-background-color: black;
+}
+
+
+

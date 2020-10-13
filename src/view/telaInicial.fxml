@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@../UI/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaInicialController">
+   <children>
+      <AnchorPane fx:id="pane" prefHeight="388.0" prefWidth="592.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane layoutY="45.0" prefHeight="355.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+               <children>
+                  <JFXTabPane prefHeight="340.0" prefWidth="600.0">
+                     <tabs>
+                        <Tab text="Inicial">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                        <Tab text="Investimentos">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                        <Tab text="Clientes">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </StackPane>
+            <Label fx:id="lblCabecalho" prefHeight="44.0" prefWidth="600.0" />
+            <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="548.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
+               <image>
+                  <Image url="@../image/kisspng-computer-icons-user-clip-art-user-5abf13db5624e4.1771742215224718993529.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="553.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0">
+               <image>
+                  <Image url="@../image/logo1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

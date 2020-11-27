@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.image.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
@@ -9,28 +11,62 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@../UI/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaInicialController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../UI/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaInicialController">
    <children>
-      <AnchorPane fx:id="pane" prefHeight="388.0" prefWidth="592.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="pane" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <StackPane layoutY="45.0" prefHeight="355.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+            <StackPane layoutY="45.0" prefHeight="566.0" prefWidth="1000.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
                <children>
-                  <JFXTabPane prefHeight="340.0" prefWidth="600.0">
+                  <JFXTabPane prefHeight="600.0" prefWidth="1000.0">
                      <tabs>
                         <Tab text="Inicial">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="146.0" layoutY="22.0" prefHeight="491.0" prefWidth="709.0">
+                                       <children>
+                                          <TableView fx:id="tabelaMoedas" layoutX="14.0" layoutY="8.0" prefHeight="559.0" prefWidth="671.0">
+                                            <columns>
+                                              <TableColumn fx:id="moeda" prefWidth="363.0" text="Moeda" />
+                                              <TableColumn fx:id="valor" prefWidth="297.0" text="Valor" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Pane fx:id="paneView" layoutX="473.0" layoutY="43.0" prefHeight="380.0" prefWidth="500.0" />
+                                 </children></AnchorPane>
                           </content>
                         </Tab>
                         <Tab text="Investimentos">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="Investimento" layoutX="20.0" layoutY="28.0" prefHeight="578.0" prefWidth="964.0" stylesheets="@../UI/Style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="20.0">
+                                      <columns>
+                                          <TableColumn fx:id="ordemInvestimento" maxWidth="100.0" prefWidth="50.0" text="#" />
+                                        <TableColumn fx:id="clienteInvestimento" maxWidth="400.0" prefWidth="371.0" text="CLIENTE" />
+                                        <TableColumn fx:id="moedaInvestimento" maxWidth="300.0" prefWidth="150.0" text="MOEDA" />
+                                          <TableColumn fx:id="quantidadeInvestimento" maxWidth="222.0" prefWidth="220.0" text="QUANTIDADE" />
+                                          <TableColumn fx:id="valorInvestimento" maxWidth="350.0" minWidth="0.0" prefWidth="167.0" text="VALOR DE COMPRA" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
                           </content>
                         </Tab>
                         <Tab text="Clientes">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                          </content>
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tbCliente" layoutX="163.0" layoutY="12.0" prefHeight="505.0" prefWidth="675.0">
+                                       <columns>
+                                          <TableColumn fx:id="tbClienteOrdem" maxWidth="100.0" prefWidth="50.0" text="#" />
+                                          <TableColumn fx:id="tbClienteID" minWidth="0.0" prefWidth="0.0" text="ID" />
+                                          <TableColumn fx:id="tbClienteNome" maxWidth="587.0" prefWidth="548.0" text="NOME" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
                         </Tab>
                      </tabs>
                   </JFXTabPane>
@@ -39,7 +75,7 @@
             <Label fx:id="lblCabecalho" prefHeight="44.0" prefWidth="600.0" />
             <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="548.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
                <image>
-                  <Image url="@../image/kisspng-computer-icons-user-clip-art-user-5abf13db5624e4.1771742215224718993529.png" />
+                  <Image url="@../image/user.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="553.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0">
@@ -47,6 +83,11 @@
                   <Image url="@../image/logo1.png" />
                </image>
             </ImageView>
+            <JFXButton fx:id="btnLoad" layoutX="441.0" layoutY="625.0" onAction="#cmdLoad" prefHeight="61.0" prefWidth="118.0" text="ATUALIZAR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
    </children>
